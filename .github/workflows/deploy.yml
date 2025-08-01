@@ -1,33 +1,17 @@
-name: Deploy Flask App
+steps:
+  - uses: actions/checkout@v3
 
-on:
-  push:
-    branches: [ main ]
+  - name: Setup JDK
+    uses: actions/setup-java@v3
+    with:
+      distribution: 'temurin'
+      java-version: '11'
 
-jobs:
-  deploy:
-    runs-on: ubuntu-latest
+  - name: Build APK
+    run: ./gradlew assembleRelease
 
-    steps:
-    - name: Checkout code
-      uses: actions/checkout@v3
-
-    - name: Set up Python
-      uses: actions/setup-python@v4
-      with:
-        python-version: '3.9'  # ورژنی که پروژه‌ات باهاش سازگاره
-
-    - name: Install dependencies
-      run: |
-        python -m pip install --upgrade pip
-        pip install -r requirements.txt
-
-    - name: Run tests
-      run: |
-        # اینجا می‌تونی تست‌های پروژه رو بذاری اگه داری
-        echo "No tests defined"
-
-    - name: Deploy to server or build
-      run: |
-        # مثلا اگر داره روی Heroku یا سرویس دیگه دپلوی می‌کنی اینجا دستوراتش رو بذار
-        echo "Deploy step placeholder"
+  - name: Upload APK
+    uses: actions/upload-artifact@v3
+    with:
+      name: app-release.apk
+      path: app/build/outputs/apk/release/app-release.apk
