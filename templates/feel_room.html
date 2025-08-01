@@ -1,0 +1,458 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Vibella</title>
+  <style>
+    
+    body {
+        background-image: url('/static/wallpaper4.jpg');
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-attachment: scroll;
+      background-color: rgb(195, 195, 195);
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      font-size: x-large;
+      text-align: center;
+      margin: 50;
+      padding: 50;
+      .box{
+      padding: 40px;
+      margin-bottom: 50px;
+      }
+
+    }
+
+    li {
+      color: darkred;
+      font-style: italic;
+      font-size: large;
+    }
+
+    #myImage {
+      width: 60%;
+      height: auto;
+      transition: opacity 1s ease-in-out;
+      border-radius: 50px;
+      box-shadow: 0 0 50px rgb(255, 254, 254);
+      display: block;
+      margin: 30px auto;
+    }
+    
+  </style>
+  <style>
+    
+    .btn_sad {
+      margin: 10px;
+      background-color: #3f3c92; 
+      color: white;              
+      border: none;      
+      padding: 12px 50px;        
+      border-radius: 25px;       
+      font-size: 35px;          
+      font-weight: bold;         
+      cursor: pointer;           
+      box-shadow: 0 4px 8px rgba(255, 64, 129, 0.4); 
+      transition: all 0.3s ease; 
+    }
+  
+    
+    button:hover {
+      background-color: #17082a; 
+      box-shadow: 0 6px 12px rgba(231, 51, 112, 0.6); 
+      transform: translateY(-3px); 
+    }
+  
+    
+    button:active {
+      background-color: #b02e57; 
+      box-shadow: 0 2px 5px rgba(176, 46, 87, 0.8);
+      transform: translateY(1px); 
+    }
+    .btn_love {
+      margin: 10px;
+      background-color: #ff3535; 
+      color: white;              
+      border: none;      
+      padding: 12px 25px;        
+      border-radius: 25px;       
+      font-size: 35px;          
+      font-weight: bold;         
+      cursor: pointer;           
+      box-shadow: 0 4px 8px rgba(255, 64, 129, 0.4); 
+      transition: all 0.3s ease; 
+    }
+  
+    
+    button:hover {
+      background-color: #9e1515; 
+      box-shadow: 0 6px 12px rgba(231, 51, 112, 0.6); 
+      transform: translateY(-3px); 
+    }
+  
+    
+    button:active {
+      background-color: #b02e57; 
+      box-shadow: 0 2px 5px rgba(176, 46, 87, 0.8);
+      transform: translateY(1px); 
+    }
+
+
+    .btn_joy {
+      margin: 10px;
+      background-color: #ff9c3e; 
+      color: white;              
+      border: none;      
+      padding: 12px 25px;        
+      border-radius: 25px;       
+      font-size: 35px;          
+      font-weight: bold;         
+      cursor: pointer;           
+      box-shadow: 0 4px 8px rgba(200, 9, 187, 0.482); 
+      transition: all 0.3s ease; 
+    }
+  
+    
+    button:hover {
+      background-color: #8383833c; 
+      box-shadow: 0 6px 12px rgba(139, 0, 114, 0.6); 
+      transform: translateY(-3px); 
+    }
+  
+    
+    button:active {
+      background-color: rgba(255, 136, 0, 0.493); 
+      box-shadow: 0 2px 5px rgba(255, 248, 112, 0.8);
+      transform: translateY(1px); 
+    }
+    .btn_peace {
+      margin: 10px;
+      background-color: #619c66; 
+      color: white;              
+      border: none;      
+      padding: 12px 25px;        
+      border-radius: 25px;       
+      font-size: 35px;          
+      font-weight: bold;         
+      cursor: pointer;           
+      box-shadow: 0 4px 8px rgba(200, 9, 187, 0.482); 
+      transition: all 0.3s ease; 
+    }
+  
+    
+    button:hover {
+      background-color: #8383833c; 
+      box-shadow: 0 6px 12px rgba(139, 0, 114, 0.6); 
+      transform: translateY(-3px); 
+    }
+  
+    
+    button:active {
+      background-color: rgba(0, 255, 98, 0.493); 
+      box-shadow: 0 2px 5px rgba(255, 248, 112, 0.8);
+      transform: translateY(1px); 
+    }
+    .btn_stress {
+      margin: 10px;
+      background-color: #89619c; 
+      color: white;              
+      border: none;      
+      padding: 12px 25px;        
+      border-radius: 25px;       
+      font-size: 35px;          
+      font-weight: bold;         
+      cursor: pointer;           
+      box-shadow: 0 4px 8px rgba(200, 9, 187, 0.482); 
+      transition: all 0.3s ease; 
+    }
+  
+    
+    button:hover {
+      background-color: #8383833c; 
+      box-shadow: 0 6px 12px rgba(139, 0, 114, 0.6); 
+      transform: translateY(-3px); 
+    }
+  
+    
+    button:active {
+      background-color: rgba(179, 179, 179, 0.493); 
+      box-shadow: 0 2px 5px rgba(255, 248, 112, 0.8);
+      transform: translateY(1px); 
+    }
+    .btn_hope {
+      margin: 10px;
+      background-color: #ffc052; 
+      color: white;              
+      border: none;      
+      padding: 12px 25px;        
+      border-radius: 25px;       
+      font-size: 35px;          
+      font-weight: bold;         
+      cursor: pointer;           
+      box-shadow: 0 4px 8px rgba(200, 9, 187, 0.482); 
+      transition: all 0.3s ease; 
+    }
+  
+    
+    button:hover {
+      background-color: #8383833c; 
+      box-shadow: 0 6px 12px rgba(139, 0, 114, 0.6); 
+      transform: translateY(-3px); 
+    }
+    .btn_despair {
+      margin: 10px;
+      background-color: #7b7b7b; 
+      color: white;              
+      border: none;      
+      padding: 12px 25px;        
+      border-radius: 25px;       
+      font-size: 35px;          
+      font-weight: bold;         
+      cursor: pointer;           
+      box-shadow: 0 4px 8px rgba(200, 9, 187, 0.482); 
+      transition: all 0.3s ease; 
+    }
+  
+    
+    button:hover {
+      background-color: #8383833c; 
+      box-shadow: 0 6px 12px rgba(139, 0, 114, 0.6); 
+      transform: translateY(-3px); 
+    }
+  
+    
+    button:active {
+      background-color: rgba(179, 179, 179, 0.493); 
+      box-shadow: 0 2px 5px rgba(255, 248, 112, 0.8);
+      transform: translateY(1px); 
+    }
+  
+    
+    button:active {
+      background-color: rgba(179, 179, 179, 0.493); 
+      box-shadow: 0 2px 5px rgba(255, 248, 112, 0.8);
+      transform: translateY(1px); 
+    }
+    .btn_pride {
+      margin: 10px;
+      background-color: #799941; 
+      color: white;              
+      border: none;      
+      padding: 12px 25px;        
+      border-radius: 25px;       
+      font-size: 35px;          
+      font-weight: bold;         
+      cursor: pointer;           
+      box-shadow: 0 4px 8px rgba(200, 9, 187, 0.482); 
+      transition: all 0.3s ease; 
+    }
+  
+    
+    button:hover {
+      background-color: #8383833c; 
+      box-shadow: 0 6px 12px rgba(139, 0, 114, 0.6); 
+      transform: translateY(-3px); 
+    }
+  
+    
+    button:active {
+      background-color: rgba(179, 179, 179, 0.493); 
+      box-shadow: 0 2px 5px rgba(255, 248, 112, 0.8);
+      transform: translateY(1px); 
+    }
+  
+    
+    button:active {
+      background-color: rgba(179, 179, 179, 0.493); 
+      box-shadow: 0 2px 5px rgba(255, 248, 112, 0.8);
+      transform: translateY(1px); 
+    }
+    .btn_anxiety {
+      margin: 10px;
+      background-color: #56a3b5; 
+      color: white;              
+      border: none;      
+      padding: 12px 25px;        
+      border-radius: 25px;       
+      font-size: 35px;          
+      font-weight: bold;         
+      cursor: pointer;           
+      box-shadow: 0 4px 8px rgba(200, 9, 187, 0.482); 
+      transition: all 0.3s ease; 
+    }
+  
+    
+    button:hover {
+      background-color: #8383833c; 
+      box-shadow: 0 6px 12px rgba(139, 0, 114, 0.6); 
+      transform: translateY(-3px); 
+    }
+  
+    
+    button:active {
+      background-color: rgba(179, 179, 179, 0.493); 
+      box-shadow: 0 2px 5px rgba(255, 248, 112, 0.8);
+      transform: translateY(1px); 
+    }
+  
+    
+    button:active {
+      background-color: rgba(179, 179, 179, 0.493); 
+      box-shadow: 0 2px 5px rgba(255, 248, 112, 0.8);
+      transform: translateY(1px); 
+    }
+    .btn_loneliness {
+      margin: 10px;
+      background-color: #2d143f; 
+      color: white;              
+      border: none;      
+      padding: 12px 50px;        
+      border-radius: 25px;       
+      font-size: 35px;          
+      font-weight: bold;         
+      cursor: pointer;           
+      box-shadow: 0 4px 8px rgba(200, 9, 187, 0.482); 
+      transition: all 0.3s ease; 
+    }
+  
+    
+    button:hover {
+      background-color: #8383833c; 
+      box-shadow: 0 6px 12px rgba(139, 0, 114, 0.6); 
+      transform: translateY(-3px); 
+    }
+  
+    
+    button:active {
+      background-color: rgba(179, 179, 179, 0.493); 
+      box-shadow: 0 2px 5px rgba(255, 248, 112, 0.8);
+      transform: translateY(1px); 
+    }
+  
+    
+    button:active {
+      background-color: rgba(179, 179, 179, 0.493); 
+      box-shadow: 0 2px 5px rgba(255, 248, 112, 0.8);
+      transform: translateY(1px); 
+    }
+    .btn_fear {
+      margin: 20px;
+      background-color: #9e1e26; 
+      color: white;              
+      border: none;      
+      padding: 12px 25px;        
+      border-radius: 25px;       
+      font-size: 35px;          
+      font-weight: bold;         
+      cursor: pointer;           
+      box-shadow: 0 4px 8px rgba(200, 9, 187, 0.482); 
+      transition: all 0.3s ease; 
+    }
+  
+    
+    button:hover {
+      background-color: #8383833c; 
+      box-shadow: 0 6px 12px rgba(139, 0, 114, 0.6); 
+      transform: translateY(-3px); 
+    }
+  
+    
+    button:active {
+      background-color: rgba(179, 179, 179, 0.493); 
+      box-shadow: 0 2px 5px rgba(255, 248, 112, 0.8);
+      transform: translateY(1px); 
+    }
+  
+    
+    button:active {
+      background-color: rgba(179, 179, 179, 0.493); 
+      box-shadow: 0 2px 5px rgba(255, 248, 112, 0.8);
+      transform: translateY(1px); 
+    }
+    .btn_anger {
+      margin: 20px;
+      background-color: #cb3179; 
+      color: white;              
+      border: none;      
+      padding: 12px 25px;        
+      border-radius: 25px;       
+      font-size: 35px;          
+      font-weight: bold;         
+      cursor: pointer;           
+      box-shadow: 0 4px 8px rgba(200, 9, 187, 0.482); 
+      transition: all 0.3s ease; 
+    }
+  
+    
+    button:hover {
+      background-color: #8383833c; 
+      box-shadow: 0 6px 12px rgba(139, 0, 114, 0.6); 
+      transform: translateY(-3px); 
+    }
+  
+    
+    button:active {
+      background-color: rgba(179, 179, 179, 0.493); 
+      box-shadow: 0 2px 5px rgba(255, 248, 112, 0.8);
+      transform: translateY(1px); 
+    }
+  
+    
+    button:active {
+      background-color: rgba(179, 179, 179, 0.493); 
+      box-shadow: 0 2px 5px rgba(255, 248, 112, 0.8);
+      transform: translateY(1px); 
+    }
+  </style>
+  
+</head>
+<body>
+  <img id="myImage2" src="/static/vib.png" alt="Slideshow"> </body>
+
+  <img id="myImage" src="/static/sad.jpg" alt="Slideshow" style="width: 500px; height: 500px; object-fit: cover; border-radius: 10px;">
+
+
+  <script>
+    const images = [
+      "/static/sad.jpg",
+      "/static/happy.jpg",
+      "/static/love.jpg",
+      "/static/peace.jpg",
+      "/static/stress.jpg",
+      "/static/hope.jpg",
+      "/static/self.jpg",
+      "/static/pride.jpg",
+      "/static/hurt.jpg",
+      "/static/after_cry.jpg",
+      "/static/a_feel.jpg",
+      "/static/anger.jpg"
+      
+    ];
+    
+    let index = 0;
+    const img = document.getElementById('myImage');
+
+    setInterval(() => {
+      img.style.opacity = 0;
+      setTimeout(() => {
+        index = (index + 1) % images.length;
+        img.src = images[index];
+        img.style.opacity = 1;        
+      }, 500);
+    }, 5000);
+  </script>
+  <button onclick="location.href='/open_sadness'", class="btn_sad",>Tears 😢</button>
+  <button onclick="location.href='/open_joy'", class="btn_joy">Joy 😊</button>
+  <button onclick="location.href='/open_love'", class="btn_love">Love ❤️</button>
+  <button onclick="location.href='/open_peace'", class="btn_peace">Peace 🌿</button>
+  <button onclick="location.href='/open_stress'", class="btn_stress">Stress 😬</button>
+  <button onclick="location.href='/open_hope'", class="btn_hope">Hope 🌈</button>
+  <button onclick="location.href='/open_despair'", class="btn_despair">Despair 🖤</button>
+  <button onclick="location.href='/open_pride'", class="btn_pride">Pride 😌</button>
+  <button onclick="location.href='/open_anxiety'", class="btn_anxiety">Anxiety 😖</button>
+  <button onclick="location.href='/open_loneliness'", class="btn_loneliness">Loneliness 🥺</button>
+  <button onclick="location.href='/open_fear'", class="btn_fear">Fear 😱</button>
+  <button onclick="location.href='/open_anger'", class="btn_anger">Anger 😡</button>
+
+   
+</body>
+</html>

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Vibella</title>
+  <style>
+    body {
+        background-image: url('/static/wallpaper10.jpg');
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-attachment: scroll;
+      background-color: rgb(195, 195, 195);
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      font-size: x-large;
+      text-align: center;
+      margin: 50;
+      padding: 50;
+      .box{
+      padding: 40px;
+      margin-bottom: 50px;
+      }
+
+    }
+
+    li {
+      color: darkred;
+      font-style: italic;
+      font-size: large;
+    }
+
+    #myImage {
+      width: 60%;
+      height: auto;
+      transition: opacity 1s ease-in-out;
+      border-radius: 50px;
+      box-shadow: 0 0 50px rgb(255, 254, 254);
+      display: block;
+      margin: 30px auto;
+    }
+    
+  </style>
+</head>
+<body>
+  <img id="myImage2" src="/static/vib.png" alt="Slideshow"> </body>
+
+  <img id="myImage" src="/static/peace1.jpg" alt="Slideshow" style="width: 500px; height: 500px; object-fit: cover; border-radius: 10px;">
+
+
+  <script>
+    const images = [
+      "/static/peace1.jpg"
+    ];
+    
+    let index = 0;
+    const img = document.getElementById('myImage');
+
+    setInterval(() => {
+      img.style.opacity = 0;
+      setTimeout(() => {
+        index = (index + 1) % images.length;
+        img.src = images[index];
+        img.style.opacity = 1;        
+      }, 500);
+    }, 5000);
+  </script>
+  
+   
+</body>
+</html>
